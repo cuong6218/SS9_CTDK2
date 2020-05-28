@@ -1,6 +1,6 @@
 function cacularDay(){
-    let a = document.getElementById('textbox').value;
-    switch (parseInt(a)){
+    let a = +document.getElementById('textbox').value;
+    switch (a){
         case 1:
         case 3:
         case 5:
