@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p1>Nhập tổng điện năng tiêu thụ (đơn vị kWWh):</p1>
+    <input type="text" id="voltage"/><br/>
+    <button type="button" onclick="testVoltage()">Kiểm tra giá điện</button>
+    <script>
+        let voltage = document.getElementById('voltage');
+        let result;
+        function testVoltage(){
+            if (voltage.value > 110){
+            result = voltage.value*1.536;
+        } else if (voltage.value >=22){
+            result = voltage.value*1.555;
+        } else if (voltage.value >=6){
+            result = voltage.value*1.611;
+        } else result = voltage.value*1.685;
+    alert(`Giá tiền điện là: ${result} đồng/kWh`);
+        }
+    </script>
+</body>
+</html>

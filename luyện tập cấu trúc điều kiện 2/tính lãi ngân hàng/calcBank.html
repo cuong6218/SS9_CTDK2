@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p1>Nhập số tiền vay là:</p1>
+    <input type="text" id="money"/><br/><br/>
+    <p2>Nhập lãi suất theo tháng là:</p2>
+    <input type="text" id="rate"/><br/><br/>
+    <p3>Nhập số tháng vay:</p3>
+    <input type="text" id="month"/>
+    <button type="button" onclick="calcBank()">Tính tiền lãi</button>
+    <script>
+        function calcBank(){
+            let money = +document.getElementById('money').value;
+            let rate = +document.getElementById('rate').value;
+            let month = +document.getElementById('month').value;
+            let result = (money+rate/100)*Math.pow(1+rate/100,month);
+            alert(`Số tiền lãi của bạn là: ${result.toFixed(2)}`)
+            }
+        
+    </script>
+</body>
+</html>

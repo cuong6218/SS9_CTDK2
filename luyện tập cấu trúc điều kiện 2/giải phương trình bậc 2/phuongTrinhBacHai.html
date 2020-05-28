@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt('Nhập số a:',);
+        let b = +prompt('Nhập số b:',);
+        let c = +prompt('Nhập số c:',);
+        let delta = b*b-4*a*c;
+        let x1;
+        let x2;
+        if (a!=0){
+            if (delta<0){
+                alert('Phương trình vô nghiệm');
+            } else if (delta==0){
+               x1 = -b/(2*a);
+               alert(`Phương trình có 1 nghiệm kép là: x1 = x2 = ${x1}`);
+            } else if (delta>=0){
+                x1 = (-b-Math.sqrt(delta))/(2*a);
+                x2 = (-b+Math.sqrt(delta))/(2*a);
+                alert(`Phương trình có 2 nghiệm là x1 = ${x1} và x2 = ${x2}`);
+            }
+        } else alert('số a bằng 0, mời nhập lại số a');
+    </script>
+</body>
+</html>
